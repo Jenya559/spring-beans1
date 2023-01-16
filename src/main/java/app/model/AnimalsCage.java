@@ -11,10 +11,6 @@ public class AnimalsCage {
     @Qualifier("dog")
     private Animal animal;
 
-    public Timer getTimer() {
-        return timer;
-    }
-
     @Autowired
     @Qualifier("timer")
     private Timer timer;
@@ -25,5 +21,9 @@ public class AnimalsCage {
         System.out.println("At:");
         System.out.println(timer.getTime());
         System.out.println("________________________");
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 }
